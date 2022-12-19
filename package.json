@@ -1,20 +1,38 @@
 {
-  "name": "bk-simple-react",
+  "name": "bk-react-app",
+  "info": {
+    "title": "React App",
+    "name": "React App",
+    "shortName": "React App",
+    "description": "Hello, world!",
+    "color": "#FF6600",
+    "backgroundColor": "#DDD",
+    "appUrl": "https://example.com/",
+    "author": "Max Goddard (Buckell)",
+    "authorUrl": "https://maxgoddard.dev"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "handlebars": "^4.7.7",
+    "interpolate-html-plugin": "^4.0.0",
     "react": "^18.2.0",
+    "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.5.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "styled-components": "^5.3.6",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.75.0",
+    "webpack-sources": "^3.2.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +52,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "favicons-webpack-plugin": "^6.0.0",
+    "generate-file-webpack-plugin": "^1.0.1"
   }
 }
