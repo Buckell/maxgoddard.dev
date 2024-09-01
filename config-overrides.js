@@ -47,7 +47,7 @@ module.exports = {
         }))
 
         config.plugins.push(new GenerateFileWebpackPlugin({
-            file: "robotos.txt",
+            file: "robots.txt",
             content: () => template("templates/robots.hbs")({
 
             })
