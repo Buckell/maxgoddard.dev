@@ -7,8 +7,8 @@ export default function FlipImage(props) {
 
     return (
         <Container style={style} className="flipImage">
-            <img src={HeadshotSquare}/>
-            <img src={ProfileSquare}/>
+            <img src={HeadshotSquare} alt=""/>
+            <img src={ProfileSquare} alt=""/>
         </Container>
     );
 }

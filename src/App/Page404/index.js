@@ -1,11 +1,11 @@
-import {useCallback, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import Particles, {initParticlesEngine} from "@tsparticles/react";
 import {loadSlim} from "@tsparticles/slim";
 import Container from "./Container";
 import {Link} from "react-router-dom";
 
 export default function Page404() {
-    const [init, setInit] = useState(false);
+    const [, setInit] = useState(false);
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
@@ -15,15 +15,10 @@ export default function Page404() {
         });
     }, []);
 
-    const particlesLoaded = (container) => {
-        console.log(container);
-    };
-
     return (
         <>
             <Particles
                 id="tsparticles"
-                loaded={particlesLoaded}
                 options={{
                     background: {
                         color: {

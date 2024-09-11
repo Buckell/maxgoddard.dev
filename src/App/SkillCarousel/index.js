@@ -88,7 +88,7 @@ export default function SkillCarousel(props) {
 
             const skill = skills[effectIndex];
 
-            const element = spawnSkill(skill);
+            spawnSkill(skill);
 
             if (effectIndex + 1 >= skills.length) {
                 effectIndex = 0;
@@ -126,7 +126,7 @@ export default function SkillCarousel(props) {
                 {
                     selectedSkill &&
                     <>
-                        <img src={selectedSkill.icon} />
+                        <img src={selectedSkill.icon} alt="" />
                         <SkillTitle>{selectedSkill.title}</SkillTitle>
                         <SkillDescription>{selectedSkill.description}</SkillDescription>
                     </>

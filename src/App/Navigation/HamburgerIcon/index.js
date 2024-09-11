@@ -1,5 +1,4 @@
 import Container from "./Container";
-import {useState} from "react";
 import useChangeValue from "../../../useChangeValue";
 
 export default function HamburgerIcon(props) {

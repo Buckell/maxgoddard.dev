@@ -4,8 +4,6 @@ import Container from "./Container";
 import SideGlow from "./SideGlow";
 import LinkContainer from "./LinkContainer";
 import SocialsContainer from "./SocialsContainer";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faFacebook, faLinkedin, faXTwitter} from "@fortawesome/free-brands-svg-icons";
 
 export default function Navigation(props) {
     const {children, socials} = props;

@@ -2,7 +2,6 @@ import Bio from "./Bio";
 import Projects from "./Projects";
 import Footer from "./Footer";
 import ProjectImage from "./Projects/ProjectImage";
-import ImageProton from "../assets/proton.webp";
 import Project from "./Projects/Project";
 import ProjectTitle from "./Projects/ProjectTitle";
 import ProjectDescription from "./Projects/ProjectDescription";

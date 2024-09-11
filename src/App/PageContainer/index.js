@@ -1,9 +1,9 @@
 import NavigationLink from "../Navigation/NavigationLink";
 import Navigation from "../Navigation";
 import Container from "./Container";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faFacebook, faLinkedin, faXTwitter} from "@fortawesome/free-brands-svg-icons";
+import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {onClickOpenNewTab} from "../../util";
 
 
