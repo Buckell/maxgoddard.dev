@@ -15,6 +15,8 @@ export default styled.div`
         max-width: 800px;
         font-size: 11pt;
         margin: 20px;
+        line-height: 1.75;
+        text-align: justify;
     }
     
     div.flipImage {
@@ -33,7 +35,7 @@ export default styled.div`
         }
         
         p {
-            margin: 0 auto;
+            margin: 20px auto;
             font-size: 13pt;
         }
     }
