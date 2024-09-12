@@ -8,6 +8,7 @@ export default function SkillCarousel(props) {
     const {skills} = props;
 
     const [selectedSkill, setSelectedSkill] = useState();
+    const [hidden, setHidden] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const travelSpeed = 75;
@@ -16,9 +17,14 @@ export default function SkillCarousel(props) {
 
     const resetCarousel = () => {
         setWindowWidth(window.innerWidth);
+        setHidden(document.hidden);
     };
 
     const handleCarousel = () => {
+        if (hidden) {
+            return;
+        }
+
         let effectIndex = 0;
 
         const carousel = carouselRef.current;
@@ -97,12 +103,16 @@ export default function SkillCarousel(props) {
         return () => clearInterval(timeoutId);
     };
 
-    useEffect(handleCarousel, [carouselRef, skills, windowWidth, document.hidden]); // eslint-disable-line
+    useEffect(handleCarousel, [carouselRef, skills, windowWidth, hidden]); // eslint-disable-line
 
     useEffect(() => {
         window.addEventListener('resize', resetCarousel);
+        document.addEventListener('visibilitychange', resetCarousel);
 
-        return () => window.removeEventListener('resize', resetCarousel);
+        return () => {
+            window.removeEventListener('resize', resetCarousel);
+            document.removeEventListener('visibilitychange', resetCarousel);
+        };
     }, [carouselRef]);
 
     return (
