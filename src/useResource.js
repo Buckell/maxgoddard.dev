@@ -13,7 +13,7 @@ export default function useResource(fetch, defaultValue) {
         }
     };
 
-    useEffect(refresh, [setValue]);
+    useEffect(refresh, [setValue, fetch]);
 
     return [value, refresh];
 }

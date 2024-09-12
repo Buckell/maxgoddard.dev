@@ -8,7 +8,6 @@ export default function SkillCarousel(props) {
     const {skills} = props;
 
     const [selectedSkill, setSelectedSkill] = useState();
-    const [index, setIndex] = useState(0);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const travelSpeed = 75;
@@ -20,7 +19,7 @@ export default function SkillCarousel(props) {
     };
 
     const handleCarousel = () => {
-        let effectIndex = index;
+        let effectIndex = 0;
 
         const carousel = carouselRef.current;
 
@@ -68,10 +67,8 @@ export default function SkillCarousel(props) {
 
             if (effectIndex + 1 >= skills.length) {
                 effectIndex = 0;
-                setIndex(0);
             } else {
                 effectIndex++;
-                setIndex(index => index + 1);
             }
 
             if (position > windowWidth) {
@@ -92,17 +89,15 @@ export default function SkillCarousel(props) {
 
             if (effectIndex + 1 >= skills.length) {
                 effectIndex = 0;
-                setIndex(0);
             } else {
                 effectIndex++;
-                setIndex(index => index + 1);
             }
         }, (iconSize + iconSpacing) / travelSpeed * 1000);
 
         return () => clearInterval(timeoutId);
     };
 
-    useEffect(handleCarousel, [carouselRef, skills, windowWidth, document.hidden]);
+    useEffect(handleCarousel, [carouselRef, skills, windowWidth, document.hidden]); // eslint-disable-line
 
     useEffect(() => {
         window.addEventListener('resize', resetCarousel);
@@ -114,13 +109,9 @@ export default function SkillCarousel(props) {
         <Container>
             <h1>Skills</h1>
 
-            <div ref={carouselRef} className="carousel">
+            <div ref={carouselRef} className="carousel" />
 
-            </div>
-
-            <div className="skill-description">
-
-            </div>
+            <div className="skill-description" />
 
             <SkillInformation>
                 {
