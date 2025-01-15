@@ -1,25 +1,25 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 export default function useResource(fetch, defaultValue) {
     const [value, setValue] = useState(defaultValue);
-    const [fetched, setFetched] = useState(false);
+    const fetched = useRef(false);
 
-    const refresh = () => {
+    const refresh = useRef(() => {
         const result = fetch();
-        setFetched(true);
+        fetched.current = true;
 
         if (result.then) {
             result.then(setValue);
         } else {
             setValue(result);
         }
-    };
+    });
 
     useEffect(() => {
-        if (!fetched) {
-            refresh();
+        if (!fetched.current) {
+            refresh.current();
         }
-    }, [setValue, fetch]);
+    }, [setValue, fetch, fetched, refresh]);
 
     return [value, refresh];
 }
