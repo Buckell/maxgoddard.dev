@@ -16,12 +16,13 @@ import JavaIcon from 'assets/skill_icons/java.png';
 import DiscordIcon from 'assets/skill_icons/discord.png';
 import CodeIcon from 'assets/skill_icons/code.png';
 import GoogleIcon from 'assets/skill_icons/google.png';
-import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import ImageProton from "./assets/proton.webp";
 import ImageTimeManager from "./assets/timemanager.png";
 import ImageMonet from "./assets/monet.webp";
 import ImageRebar from "./assets/rebar.png";
 import WebsiteImage from "./assets/website.png";
+import GrailImage from "./assets/grail.png";
 
 const Max = {
     getSkills: async () => {
@@ -283,6 +284,18 @@ const Max = {
     getProjects: async () => {
         return [
             {
+                title: 'GRAIL',
+                image: GrailImage,
+                brief:
+                    'GRAIL is a front-end graphical application for the popular Monte Carlo particle simulation' +
+                    'software OpenMC. ',
+                description:
+                    'GRAIL is an application providing a graphical front-end for Monte Carlo particle simulation' +
+                    'using OpenMC. It allows building and simulating geometry graphically without needing to program' +
+                    'the geometry and other information for OpenMC.',
+                links: [],
+            },
+            {
                 title: 'Rebar',
                 image: ImageRebar,
                 brief:
@@ -300,11 +313,11 @@ const Max = {
                         icon: faGithub,
                         location: 'https://github.com/Buckell/rebar',
                     },
-                    {
-                        title: 'LinkedIn',
-                        icon: faLinkedin,
-                        location: '',
-                    },
+                    // {
+                    //     title: 'LinkedIn',
+                    //     icon: faLinkedin,
+                    //     location: '',
+                    // },
                 ]
             },
             {

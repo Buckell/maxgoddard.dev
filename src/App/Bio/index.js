@@ -6,10 +6,12 @@ import {Link} from "react-router-dom";
 
 
 const Description = `
-    I am an engineer and software developer. I'm currently attending the Georgia Institute of Technology (Georgia Tech)
-    for Nuclear Engineering, with a focus toward fusion reactor research and development. Currently, I am working in a
-    lab focusing on reactor cybersecurity and development of a reactor flow loop test model. Aside from that, I have a 
-    love for the outdoors, programming, building things, and exploring different interests.
+    I am an engineer and software developer. I'm currently attending the Georgia Institute of Technology
+    for Nuclear Engineering, with a focus toward reactor design and fusion energy. Currently, I am working in a
+    lab focusing on reactor cybersecurity and development of a reactor coolant loop testbed, and I am also helping
+    develop a nuclear criticality safety course in collaboration with Oak Ridge National Laboratory with funding from
+    the Department of Energy. Aside from that, I have a love for the outdoors, programming, building things, and 
+    exploring different interests.
 `;
 
 export default function Bio() {

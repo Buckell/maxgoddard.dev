@@ -3,7 +3,7 @@ import Navigation from "../Navigation";
 import Container from "./Container";
 import {useNavigate} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {onClickOpenNewTab} from "../../util";
 
 
@@ -17,7 +17,8 @@ export default function PageContainer(props) {
             <Navigation
                 socials={
                     <>
-                        <FontAwesomeIcon icon={faLinkedin} onClick={onClickOpenNewTab('https://www.linkedin.com/in/max-goddard/')} />
+                        <FontAwesomeIcon icon={faLinkedin} onClick={onClickOpenNewTab('https://linkedin.com/in/max-goddard/')} />
+                        <FontAwesomeIcon icon={faGithub} onClick={onClickOpenNewTab('https://github.com/Buckell/')} />
                     </>
                 }
             >
