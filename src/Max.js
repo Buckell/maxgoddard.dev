@@ -287,11 +287,11 @@ const Max = {
                 title: 'GRAIL',
                 image: GrailImage,
                 brief:
-                    'GRAIL is a front-end graphical application for the popular Monte Carlo particle simulation' +
+                    'GRAIL is a front-end graphical application for the popular Monte Carlo particle simulation ' +
                     'software OpenMC. ',
                 description:
-                    'GRAIL is an application providing a graphical front-end for Monte Carlo particle simulation' +
-                    'using OpenMC. It allows building and simulating geometry graphically without needing to program' +
+                    'GRAIL is an application providing a graphical front-end for Monte Carlo particle simulation ' +
+                    'using OpenMC. It allows building and simulating geometry graphically without needing to program ' +
                     'the geometry and other information for OpenMC.',
                 links: [],
             },
