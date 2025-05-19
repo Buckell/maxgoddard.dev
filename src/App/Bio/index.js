@@ -6,12 +6,12 @@ import {Link} from "react-router-dom";
 
 
 const Description = `
-    I am an engineer and software developer. I'm currently attending the Georgia Institute of Technology
-    for Nuclear Engineering, with a focus toward reactor design and fusion energy. Currently, I am working in a
-    lab focusing on reactor cybersecurity and development of a reactor coolant loop testbed, and I am also helping
-    develop a nuclear criticality safety course in collaboration with Oak Ridge National Laboratory with funding from
-    the Department of Energy. Aside from that, I have a love for the outdoors, programming, building things, and 
-    exploring different interests.
+    I am a nuclear engineering student at the Georgia Institute of Technology. I am a big fan of nuclear energy, and I
+    believe it is necessary part of our energy future. Within nuclear, I have a love for plant design, public policy,
+    and regulation. Currently, I am a Licensing Engineering Intern at Blue Energy, a strategic power plant developer 
+    using SMR technology. This internship is teaching me all about regulation, how the NRC works, and how plants get
+    built. Aside from that, I also have interests in software development (see below), the outdoors, building things
+    (see above), and exploring different interests.
 `;
 
 export default function Bio() {
